@@ -114,7 +114,7 @@ void problem6(int num){
 
 	cout << "sum of the squares of from 1 to " << num << " is: " << sumOfSquares << endl;
 	cout << "sqauare of the sum of 1 to " << num << " is: " << squareOfSum << endl;
-	cout << "The difference of the 2 is: " << difference << ends;
+	cout << "The difference of the 2 is: " << difference << endl;
 }
 void problem7(int count){
 	//Find the 10,0001st prime number
