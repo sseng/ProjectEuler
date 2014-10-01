@@ -34,3 +34,24 @@ Icon
 # Files that might appear on external disk
 .Spotlight-V100
 .Trashes
+
+Debug/ProjectEuler.tlog/ProjectEuler.lastbuildstate
+Debug/main.obj
+Debug/ProjectEuler.exe
+Debug/ProjectEuler.ilk
+Debug/ProjectEuler.log
+Debug/ProjectEuler.pdb
+Debug/ProjectEuler.tlog/cl.command.1.tlog
+ProjectEuler.sdf
+Debug/ProjectEuler.tlog/CL.read.1.tlog
+Debug/ProjectEuler.tlog/CL.write.1.tlog
+Debug/ProjectEuler.tlog/link.command.1.tlog
+Debug/ProjectEuler.tlog/link.read.1.tlog
+Debug/ProjectEuler.tlog/link.write.1.tlog
+Debug/vc120.idb
+Debug/vc120.pdb
+ProjectEuler.opensdf
+ProjectEuler.sln
+ProjectEuler.v12.suo
+ProjectEuler.vcxproj
+ProjectEuler.vcxproj.filters
