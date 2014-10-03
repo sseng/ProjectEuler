@@ -1,19 +1,25 @@
 #include <iostream>
 #include <conio.h>
 #include <vector>
-//test for github
+#include <string>
+#include <fstream>
+#include <map>
+
 using namespace std;
+
 void problem3();
 void problem4();
 void problem5(unsigned int);
 void problem6(int); 
 void problem7(int);
+void problem8(int);
 
 int main(){
 	//problem4();
 	//problem5(2147483647);
 	//problem6(100);
-	problem7(10001);
+	//problem7(10001);
+	problem8(13);
 		
 	cout << endl << "program done" << endl;
 	_getch();
@@ -135,4 +141,44 @@ void problem7(int count){
 		}
 	}
 	cout << number << endl;
+}
+void problem8(int segments){
+	//find the 13 adjacent digits in the 1k digit number that have the greatest product.
+	string n;
+
+	//-- save number to string -- START
+	ifstream numberFile;
+	numberFile.open("1kdigit.txt");
+	while (!numberFile.eof()){
+		getline(numberFile, n);
+	}
+	numberFile.close();
+	//-- save number to string -- END
+	
+	int aDigit[13];
+	string strDigits;
+	int digits;
+	//int sum = 0, prevSum = 0, largestSum = 0;
+	int product = 1, prevProduct = 1, largestProduct = 1;
+
+	for (int i = 0; i <= n.length() - segments - 1; i++){				
+		//get adjacent digits as string then convert to integer
+		strDigits.append(n.begin()+i, n.begin()+i+segments);
+		digits = atoi(strDigits.c_str());
+
+					
+		
+		for (int j = 0; j <= strDigits.length()-1; j++){
+			aDigit[j] = (strDigits[j] - '0');
+			product = product * aDigit[j];
+			//sum += strDigits[j] - '0';
+		}
+		if (product >= largestProduct){
+			cout << "digits: " << strDigits << "    product: " << product << endl;
+			largestProduct = product;
+		}
+		prevProduct = product;
+		product = 1;
+		strDigits = "";
+	}
 }
