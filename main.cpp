@@ -157,24 +157,22 @@ void problem8(int segments){
 	
 	int aDigit[13];
 	string strDigits;
-	int digits;
+	//int digits;
 	//int sum = 0, prevSum = 0, largestSum = 0;
-	int product = 1, prevProduct = 1, largestProduct = 1;
+	unsigned long long product = 1, prevProduct = 1, largestProduct = 1;
 
 	for (int i = 0; i <= n.length() - segments - 1; i++){				
 		//get adjacent digits as string then convert to integer
 		strDigits.append(n.begin()+i, n.begin()+i+segments);
-		digits = atoi(strDigits.c_str());
-
-					
+		//digits = atoi(strDigits.c_str());					
 		
 		for (int j = 0; j <= strDigits.length()-1; j++){
 			aDigit[j] = (strDigits[j] - '0');
 			product = product * aDigit[j];
 			//sum += strDigits[j] - '0';
 		}
-		if (product >= largestProduct){
-			cout << "digits: " << strDigits << "    product: " << product << endl;
+		if (product >= largestProduct ){
+			cout << "digits: " << strDigits << "    product: " << product << " i: " << i << endl;
 			largestProduct = product;
 		}
 		prevProduct = product;
